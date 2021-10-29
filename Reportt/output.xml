@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.8 on win32)" generated="20211029 21:45:55.426" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\user\Documents\13.1-Assgnmt\Tests">
+<suite id="s1-s1" name="Testcase" source="C:\Users\user\Documents\13.1-Assgnmt\Tests\testcase.robot">
+<test id="s1-s1-t1" name="Observe user is able to test sanity flow">
+<kw name="Given User Launch browser for flipkart" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211029 21:45:57.174" level="INFO">Opening browser 'gc' to base url 'https://www.flipkart.com/'.</msg>
+<status status="PASS" starttime="20211029 21:45:57.174" endtime="20211029 21:46:05.140"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211029 21:46:05.140" endtime="20211029 21:46:05.167"/>
+</kw>
+<status status="PASS" starttime="20211029 21:45:57.173" endtime="20211029 21:46:05.167"/>
+</kw>
+<kw name="Then User enters login credentials" library="common">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211029 21:46:05.169" endtime="20211029 21:46:05.194"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login_No}</arg>
+<arg>9535560951</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211029 21:46:05.198" level="INFO">Typing text '9535560951' into text field 'Xpath=/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input'.</msg>
+<status status="PASS" starttime="20211029 21:46:05.196" endtime="20211029 21:46:08.478"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${login_password}</arg>
+<arg>monishri</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211029 21:46:08.478" level="INFO">Typing password into text field 'Xpath=/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input'.</msg>
+<msg timestamp="20211029 21:46:10.598" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211029 21:46:11.888" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211029 21:46:08.478" endtime="20211029 21:46:11.888"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${click_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211029 21:46:11.889" level="INFO">Clicking button 'Xpath=/html/body/div[2]/div/div/div/div/div[2]/div/form/div[4]/button'.</msg>
+<status status="PASS" starttime="20211029 21:46:11.888" endtime="20211029 21:46:17.047"/>
+</kw>
+<status status="PASS" starttime="20211029 21:46:05.168" endtime="20211029 21:46:17.047"/>
+</kw>
+<kw name="Then User searches for electronics section and select a catogory" library="common">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${select_Catogory}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20211029 21:46:17.050" level="INFO">Simulating Mouse Over on element 'Xpath=/html/body/div/div/div[2]/div/div/div[5]'.</msg>
+<status status="PASS" starttime="20211029 21:46:17.049" endtime="20211029 21:46:28.194"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${select_Dropdown}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20211029 21:46:28.194" level="INFO">Simulating Mouse Over on element 'Xpath=/html/body/div/div/div[2]/div/div/div[5]/a/div[2]/div[2]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211029 21:46:30.570" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211029 21:46:29.220" endtime="20211029 21:46:30.572"/>
+</kw>
+<msg timestamp="20211029 21:46:30.766" level="FAIL">Element with locator 'Xpath=/html/body/div/div/div[2]/div/div/div[5]/a/div[2]/div[2]' not found.</msg>
+<status status="FAIL" starttime="20211029 21:46:28.194" endtime="20211029 21:46:30.766"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${click_Subcatogory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211029 21:46:30.767" endtime="20211029 21:46:30.767"/>
+</kw>
+<status status="FAIL" starttime="20211029 21:46:17.048" endtime="20211029 21:46:30.768"/>
+</kw>
+<kw name="Then User selects a desired item" library="common">
+<status status="NOT RUN" starttime="20211029 21:46:30.770" endtime="20211029 21:46:30.770"/>
+</kw>
+<kw name="Then User adds the item to the cart" library="common">
+<status status="NOT RUN" starttime="20211029 21:46:30.771" endtime="20211029 21:46:30.771"/>
+</kw>
+<kw name="And Terminate browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211029 21:46:30.772" endtime="20211029 21:46:34.682"/>
+</kw>
+<status status="PASS" starttime="20211029 21:46:30.772" endtime="20211029 21:46:34.682"/>
+</kw>
+<tag>sanity</tag>
+<status status="FAIL" starttime="20211029 21:45:57.172" endtime="20211029 21:46:34.683">Element with locator 'Xpath=/html/body/div/div/div[2]/div/div/div[5]/a/div[2]/div[2]' not found.</status>
+</test>
+<status status="FAIL" starttime="20211029 21:45:55.555" endtime="20211029 21:46:34.687"/>
+</suite>
+<status status="FAIL" starttime="20211029 21:45:55.432" endtime="20211029 21:46:34.691"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">sanity</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcase">Tests.Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
