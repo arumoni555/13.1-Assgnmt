@@ -6,13 +6,14 @@ Observe user is able to test sanity flow
     [Tags]  sanity  
     Given User Launch browser for flipkart
     Then User enters login credentials
-    Then User searches for electronics section and select a catogory
-    Then User selects a desired item
-    Then User adds the item to the cart
+    # Then User searches for electronics section and select a catogory
+    # Then User selects a desired item
+    # Then User adds the item to the cart
     [Teardown]  And Terminate browser
 
 
 *** Variables ***
+${brwrs} =  gc
 ${url} =  https://www.flipkart.com/
 ${login_No} =  Xpath=/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input
 ${login_password} =  Xpath=/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input
